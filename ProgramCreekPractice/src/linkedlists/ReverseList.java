@@ -9,7 +9,7 @@ public class ReverseList {
 		head.next.next = new Node(3);
 		head.next.next.next = new Node(4);
 		//head.next.next.next.next = new Node(4);
-		Node out = reverseList(head);
+		Node out = swapNodesInList(head);
 		while(out != null)	{
 			System.out.println(out.value);
 			out = out.next;
@@ -46,5 +46,21 @@ public class ReverseList {
 	        
 	    }
 	    return prev;
+	}
+	
+	static Node swapNodesInList(Node head)	{
+		Node cur = head.next;
+		Node prev = head;
+		while(cur!= null)	{
+		
+			/*Node temp = cur.next;
+			cur.next = prev;
+			prev.next = temp;
+			prev = prev.next;
+			cur = prev.next;*/
+			System.out.println("prev: "+ prev.value + " cur: "+ cur.value);
+		}
+				
+		return head;
 	}
 }
